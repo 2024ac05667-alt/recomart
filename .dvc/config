@@ -1,0 +1,4 @@
+[core]
+    remote = myremote
+['remote "myremote"']
+    url = I:\personalproj22\recomart-20260115T175738Z-3-001\recomart\dvc_storage
