@@ -1,0 +1,9 @@
+pandas
+requests
+matplotlib
+seaborn
+prefect
+scikit-learn
+scikit-surprise
+fpdf
+uvicorn
