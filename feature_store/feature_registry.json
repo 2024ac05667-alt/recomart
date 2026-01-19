@@ -1,0 +1,29 @@
+{
+    "registry_name": "RecoMart_Feature_Store",
+    "last_sync_timestamp": "2026-01-17 15:17:15",
+    "active_version": "v1.0.0",
+    "target_table": "recomart.feature_transform",
+    "record_count": 991,
+    "features_documented": [
+        {
+            "name": "avg_user_rating",
+            "type": "float",
+            "description": "User bias baseline"
+        },
+        {
+            "name": "avg_item_rating",
+            "type": "float",
+            "description": "Item quality baseline"
+        },
+        {
+            "name": "user_activity_count",
+            "type": "int",
+            "description": "Engagement frequency"
+        },
+        {
+            "name": "co_occurrence_count",
+            "type": "int",
+            "description": "Collaborative reach"
+        }
+    ]
+}

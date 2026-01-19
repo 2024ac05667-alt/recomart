@@ -1,68 +1,83 @@
 import pandas as pd
 import os
 import random
-from datetime import datetime, timezone
+import logging
+import sys
+from datetime import datetime
 from sqlalchemy import create_engine, text
+from prefect import task
 
-# ---------- CONFIG ----------
+# ---------- CONFIGURATION ----------
 DB_URL = "postgresql://postgres:admin@localhost:5432/postgres"
 RAW_DATA_DIR = "data_lake"
+LOG_FILE = "pipeline_audit.log"
 os.makedirs(RAW_DATA_DIR, exist_ok=True)
 
-# ---------- FUNCTIONS ----------
-def ensure_schema(engine):
-    # 'with' ensures the connection is closed even if an error occurs
-    with engine.connect() as conn:
-        conn.execute(text("CREATE SCHEMA IF NOT EXISTS recomart;"))
-        conn.commit() # Explicitly commit schema creation
+# ---------- THE LOGGING FIX (Task 3 Requirement) ----------
+# We use a custom formatter and ensure 'delay=False' to open the file immediately
+logger = logging.getLogger("recomart_audit")
+logger.setLevel(logging.INFO)
 
-def generate_interactions(n=100):
-    ts = datetime.now(timezone.utc)
-    return pd.DataFrame({
-        "user_id": [random.randint(1, 20) for _ in range(n)],
-        "item_id": [random.randint(1, 20) for _ in range(n)],
-        "rating": [random.randint(1, 5) for _ in range(n)],
-        "ingested_at": [ts] * n
-    })
+# Create file handler which logs even debug messages
+fh = logging.FileHandler(LOG_FILE, mode='a', encoding='utf-8', delay=False)
+fh.setLevel(logging.INFO)
 
-def generate_products():
-    return pd.DataFrame([
-        {"item_id": 1, "category": "Electronics", "price": 199.99},
-        {"item_id": 2, "category": "Books", "price": 15.50},
-        {"item_id": 3, "category": "Clothing", "price": 29.99},
-        {"item_id": 4, "category": "Sports", "price": 99.99},
-        {"item_id": 5, "category": "Home", "price": 49.99}
-    ])
+# Create console handler with a higher log level
+ch = logging.StreamHandler(sys.stdout)
+ch.setLevel(logging.INFO)
 
+# Create formatter and add it to the handlers
+formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
+fh.setFormatter(formatter)
+ch.setFormatter(formatter)
+
+# Add the handlers to the logger
+if not logger.handlers:
+    logger.addHandler(fh)
+    logger.addHandler(ch)
+
+def generate_interactions(n=1000):
+    """Simulates high-frequency user interactions (Source 1)"""
+    data = [{
+        "user_id": random.randint(1, 100),
+        "item_id": random.randint(1, 50),
+        "rating": random.randint(1, 5),
+        "timestamp": datetime.now()
+    } for _ in range(n)]
+    return pd.DataFrame(data)
+
+@task(retries=3, retry_delay_seconds=10)
 def ingest_data():
-    # 1. Initialize Engine
-    engine = create_engine(DB_URL, pool_pre_ping=True) 
-    
+    engine = create_engine(DB_URL)
     try:
-        ensure_schema(engine)
+        # Start Ingestion
+        logger.info("--- STARTING INGESTION BATCH ---")
+        
+        interactions = generate_interactions(1000)
+        
+        # 1. Data Lake Save
+        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+        csv_path = os.path.join(RAW_DATA_DIR, f"batch_{timestamp}.csv")
+        interactions.to_csv(csv_path, index=False)
+        logger.info(f"AUDIT: Saved {len(interactions)} rows to Data Lake: {csv_path}")
 
-        # 2. Generate data
-        interactions = generate_interactions()
-        products = generate_products()
-
-        # 3. Save to local Data Lake (CSV)
-        timestamp = datetime.now().strftime("%Y%m%dT%H%M%S")
-        interactions.to_csv(os.path.join(RAW_DATA_DIR, f"user_interactions_{timestamp}.csv"), index=False)
-        products.to_csv(os.path.join(RAW_DATA_DIR, f"products_{timestamp}.csv"), index=False)
-
-        # 4. Insert into PostgreSQL
-        # We use a context manager for the connection to ensure it's returned to the pool
+        # 2. Database Save
         with engine.begin() as conn:
-            interactions.to_sql("raw_interactions", conn, schema="recomart", if_exists="replace", index=False)
-            products.to_sql("raw_products", conn, schema="recomart", if_exists="replace", index=False)
+            interactions.to_sql("raw_interactions", conn, schema="recomart", if_exists="append", index=False)
+        
+        logger.info("AUDIT SUCCESS: Records committed to PostgreSQL warehouse.")
+        # Force flush the log file to disk
+        fh.flush() 
+        
+        return interactions
 
-        print(f"INGEST SUCCESS | Interactions: {len(interactions)}, Products: {len(products)}")
-        return interactions, products
-
+    except Exception as e:
+        logger.error(f"AUDIT FAILURE: {str(e)}")
+        fh.flush()
+        raise e
     finally:
-        # 5. CRITICAL: Shut down the engine and close all connections
         engine.dispose()
-        print("Database engine disposed.")
 
 if __name__ == "__main__":
-    ingest_data()
+    # Manual Test Run
+    ingest_data.fn()
