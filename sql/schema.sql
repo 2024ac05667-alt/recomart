@@ -52,10 +52,10 @@ ALTER TABLE IF EXISTS recomart.feature_store
 CREATE TABLE IF NOT EXISTS recomart.model_metadata
 (
     run_id character varying(50) COLLATE pg_catalog."default" NOT NULL,
-    training_date timestamp without time zone,
+    "timestamp" timestamp without time zone,
     rmse double precision,
-    n_features integer,
-    model_type character varying(50) COLLATE pg_catalog."default",
+    explained_variance double precision,
+    n_components integer,
     CONSTRAINT model_metadata_pkey PRIMARY KEY (run_id)
 )
 

@@ -1,9 +1,9 @@
 {
     "registry_name": "RecoMart_Feature_Store",
-    "last_sync_timestamp": "2026-01-22 19:50:10",
+    "last_sync_timestamp": "2026-01-22 20:43:31",
     "active_version": "v1.0.0",
     "target_table": "recomart.feature_transform",
-    "record_count": 839,
+    "record_count": 827,
     "features_documented": [
         {
             "name": "avg_user_rating",
