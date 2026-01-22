@@ -1,0 +1,121 @@
+2026-01-22 19:04:58,776 - INFO - AUDIT: Ingestion stage started.
+2026-01-22 19:04:59,141 - INFO - --- STARTING INGESTION PIPELINE ---
+2026-01-22 19:04:59,311 - INFO - Generated 1000 synthetic interaction records.
+2026-01-22 19:04:59,313 - INFO - Attempting API fetch from https://mockapi.recomart.com/products
+2026-01-22 19:04:59,316 - INFO - API SUCCESS: Retrived 5 products.
+2026-01-22 19:04:59,428 - INFO - AUDIT: Data Lake updated. Files created: data_lake\user_interactions_20260122T190459.csv, data_lake\products_20260122T190459.csv
+2026-01-22 19:05:00,090 - INFO - AUDIT SUCCESS: 1000 interactions and 5 products committed to SQL.
+2026-01-22 19:05:00,091 - INFO - Database engine disposed. Ingestion cycle finished.
+2026-01-22 19:05:00,366 - INFO - AUDIT: Validation stage completed successfully.
+2026-01-22 19:05:02,431 - INFO - AUDIT: Feature Store updated with 820 records.
+2026-01-22 19:05:02,838 - INFO - AUDIT: Model training finished. Metrics: {'explained_variance': 0.871125537152766}
+2026-01-22 19:05:16,197 - INFO - AUDIT: Ingestion stage started.
+2026-01-22 19:05:16,278 - INFO - --- STARTING INGESTION PIPELINE ---
+2026-01-22 19:05:16,289 - INFO - Generated 1000 synthetic interaction records.
+2026-01-22 19:05:16,290 - INFO - Attempting API fetch from https://mockapi.recomart.com/products
+2026-01-22 19:05:16,292 - INFO - API SUCCESS: Retrived 5 products.
+2026-01-22 19:05:16,310 - INFO - AUDIT: Data Lake updated. Files created: data_lake\user_interactions_20260122T190516.csv, data_lake\products_20260122T190516.csv
+2026-01-22 19:05:16,628 - INFO - AUDIT SUCCESS: 1000 interactions and 5 products committed to SQL.
+2026-01-22 19:05:16,631 - INFO - Database engine disposed. Ingestion cycle finished.
+2026-01-22 19:05:16,836 - INFO - AUDIT: Validation stage completed successfully.
+2026-01-22 19:05:17,347 - INFO - AUDIT: Feature Store updated with 816 records.
+2026-01-22 19:05:17,418 - INFO - AUDIT: Model training finished. Metrics: {'explained_variance': 0.8442933430886463}
+2026-01-22 19:09:52,906 - INFO - AUDIT: Ingestion stage started.
+2026-01-22 19:09:53,002 - INFO - --- STARTING INGESTION PIPELINE ---
+2026-01-22 19:09:53,010 - INFO - Generated 1000 synthetic interaction records.
+2026-01-22 19:09:53,011 - INFO - Attempting API fetch from https://mockapi.recomart.com/products
+2026-01-22 19:09:53,012 - INFO - API SUCCESS: Retrived 5 products.
+2026-01-22 19:09:53,064 - INFO - AUDIT: Data Lake updated. Files created: data_lake\user_interactions_20260122T190953.csv, data_lake\products_20260122T190953.csv
+2026-01-22 19:09:53,439 - INFO - AUDIT SUCCESS: 1000 interactions and 5 products committed to SQL.
+2026-01-22 19:09:53,441 - INFO - Database engine disposed. Ingestion cycle finished.
+2026-01-22 19:09:53,565 - INFO - AUDIT: Validation stage completed successfully.
+2026-01-22 19:09:54,766 - INFO - AUDIT: Feature Store updated with 826 records.
+2026-01-22 19:09:54,981 - INFO - AUDIT: Model training finished. Metrics: {'explained_variance': 0.8595317277047526}
+2026-01-22 19:14:57,921 - INFO - AUDIT: Ingestion stage started.
+2026-01-22 19:14:58,033 - INFO - --- STARTING INGESTION PIPELINE ---
+2026-01-22 19:14:58,044 - INFO - Generated 1000 synthetic interaction records.
+2026-01-22 19:14:58,045 - INFO - Attempting API fetch from https://mockapi.recomart.com/products
+2026-01-22 19:14:58,047 - INFO - API SUCCESS: Retrived 5 products.
+2026-01-22 19:14:58,061 - INFO - AUDIT: Data Lake updated. Files created: data_lake\user_interactions_20260122T191458.csv, data_lake\products_20260122T191458.csv
+2026-01-22 19:14:58,307 - INFO - AUDIT SUCCESS: 1000 interactions and 5 products committed to SQL.
+2026-01-22 19:14:58,309 - INFO - Database engine disposed. Ingestion cycle finished.
+2026-01-22 19:14:58,414 - INFO - AUDIT: Validation stage completed successfully.
+2026-01-22 19:14:59,415 - INFO - AUDIT: Feature Store updated with 821 records.
+2026-01-22 19:14:59,495 - INFO - AUDIT: Model training finished. Metrics: {'explained_variance': 0.8850515475482311}
+2026-01-22 19:20:14,667 - INFO - AUDIT: Ingestion stage started.
+2026-01-22 19:20:15,084 - INFO - --- STARTING INGESTION PIPELINE ---
+2026-01-22 19:20:15,276 - INFO - Generated 1000 synthetic interaction records.
+2026-01-22 19:20:15,277 - INFO - Attempting API fetch from https://mockapi.recomart.com/products
+2026-01-22 19:20:15,290 - INFO - API SUCCESS: Retrived 5 products.
+2026-01-22 19:20:15,393 - INFO - AUDIT: Data Lake updated. Files created: data_lake\user_interactions_20260122T192015.csv, data_lake\products_20260122T192015.csv
+2026-01-22 19:20:15,959 - INFO - AUDIT SUCCESS: 1000 interactions and 5 products committed to SQL.
+2026-01-22 19:20:15,961 - INFO - Database engine disposed. Ingestion cycle finished.
+2026-01-22 19:20:16,301 - INFO - AUDIT: Validation stage completed successfully.
+2026-01-22 19:20:18,187 - INFO - AUDIT: Feature Store updated with 819 records.
+2026-01-22 19:20:18,522 - INFO - AUDIT: Model training finished. Metrics: {'explained_variance': 0.8455769872687425}
+2026-01-22 19:24:52,303 - INFO - AUDIT: Ingestion stage started.
+2026-01-22 19:24:52,391 - INFO - --- STARTING INGESTION PIPELINE ---
+2026-01-22 19:24:52,398 - INFO - Generated 1000 synthetic interaction records.
+2026-01-22 19:24:52,399 - INFO - Attempting API fetch from https://mockapi.recomart.com/products
+2026-01-22 19:24:52,401 - INFO - API SUCCESS: Retrived 5 products.
+2026-01-22 19:24:52,417 - INFO - AUDIT: Data Lake updated. Files created: data_lake\user_interactions_20260122T192452.csv, data_lake\products_20260122T192452.csv
+2026-01-22 19:24:52,644 - INFO - AUDIT SUCCESS: 1000 interactions and 5 products committed to SQL.
+2026-01-22 19:24:52,645 - INFO - Database engine disposed. Ingestion cycle finished.
+2026-01-22 19:24:52,723 - INFO - AUDIT: Validation stage completed successfully.
+2026-01-22 19:24:53,607 - INFO - AUDIT: Feature Store updated with 820 records.
+2026-01-22 19:24:53,699 - INFO - AUDIT: Model training finished. Metrics: {'explained_variance': 0.8293066212847376}
+2026-01-22 19:29:52,386 - INFO - AUDIT: Ingestion stage started.
+2026-01-22 19:29:52,482 - INFO - --- STARTING INGESTION PIPELINE ---
+2026-01-22 19:29:52,489 - INFO - Generated 1000 synthetic interaction records.
+2026-01-22 19:29:52,490 - INFO - Attempting API fetch from https://mockapi.recomart.com/products
+2026-01-22 19:29:52,492 - INFO - API SUCCESS: Retrived 5 products.
+2026-01-22 19:29:52,514 - INFO - AUDIT: Data Lake updated. Files created: data_lake\user_interactions_20260122T192952.csv, data_lake\products_20260122T192952.csv
+2026-01-22 19:29:52,736 - INFO - AUDIT SUCCESS: 1000 interactions and 5 products committed to SQL.
+2026-01-22 19:29:52,737 - INFO - Database engine disposed. Ingestion cycle finished.
+2026-01-22 19:29:52,826 - INFO - AUDIT: Validation stage completed successfully.
+2026-01-22 19:29:53,753 - INFO - AUDIT: Feature Store updated with 829 records.
+2026-01-22 19:29:53,856 - INFO - AUDIT: Model training finished. Metrics: {'explained_variance': 0.8449672260062762}
+2026-01-22 19:34:54,743 - INFO - AUDIT: Ingestion stage started.
+2026-01-22 19:34:54,830 - INFO - --- STARTING INGESTION PIPELINE ---
+2026-01-22 19:34:54,835 - INFO - Generated 1000 synthetic interaction records.
+2026-01-22 19:34:54,836 - INFO - Attempting API fetch from https://mockapi.recomart.com/products
+2026-01-22 19:34:54,838 - INFO - API SUCCESS: Retrived 5 products.
+2026-01-22 19:34:54,852 - INFO - AUDIT: Data Lake updated. Files created: data_lake\user_interactions_20260122T193454.csv, data_lake\products_20260122T193454.csv
+2026-01-22 19:34:55,206 - INFO - AUDIT SUCCESS: 1000 interactions and 5 products committed to SQL.
+2026-01-22 19:34:55,209 - INFO - Database engine disposed. Ingestion cycle finished.
+2026-01-22 19:34:55,405 - INFO - AUDIT: Validation stage completed successfully.
+2026-01-22 19:34:56,174 - INFO - AUDIT: Feature Store updated with 825 records.
+2026-01-22 19:34:56,275 - INFO - AUDIT: Model training finished. Metrics: {'explained_variance': 0.8454420185518038}
+2026-01-22 19:39:51,225 - INFO - AUDIT: Ingestion stage started.
+2026-01-22 19:39:51,295 - INFO - --- STARTING INGESTION PIPELINE ---
+2026-01-22 19:39:51,300 - INFO - Generated 1000 synthetic interaction records.
+2026-01-22 19:39:51,301 - INFO - Attempting API fetch from https://mockapi.recomart.com/products
+2026-01-22 19:39:51,303 - INFO - API SUCCESS: Retrived 5 products.
+2026-01-22 19:39:51,315 - INFO - AUDIT: Data Lake updated. Files created: data_lake\user_interactions_20260122T193951.csv, data_lake\products_20260122T193951.csv
+2026-01-22 19:39:51,579 - INFO - AUDIT SUCCESS: 1000 interactions and 5 products committed to SQL.
+2026-01-22 19:39:51,581 - INFO - Database engine disposed. Ingestion cycle finished.
+2026-01-22 19:39:51,696 - INFO - AUDIT: Validation stage completed successfully.
+2026-01-22 19:39:52,905 - INFO - AUDIT: Feature Store updated with 830 records.
+2026-01-22 19:39:53,317 - INFO - AUDIT: Model training finished. Metrics: {'explained_variance': 0.8351004499581135}
+2026-01-22 19:45:10,629 - INFO - AUDIT: Ingestion stage started.
+2026-01-22 19:45:11,090 - INFO - --- STARTING INGESTION PIPELINE ---
+2026-01-22 19:45:11,250 - INFO - Generated 1000 synthetic interaction records.
+2026-01-22 19:45:11,252 - INFO - Attempting API fetch from https://mockapi.recomart.com/products
+2026-01-22 19:45:11,263 - INFO - API SUCCESS: Retrived 5 products.
+2026-01-22 19:45:11,366 - INFO - AUDIT: Data Lake updated. Files created: data_lake\user_interactions_20260122T194511.csv, data_lake\products_20260122T194511.csv
+2026-01-22 19:45:11,981 - INFO - AUDIT SUCCESS: 1000 interactions and 5 products committed to SQL.
+2026-01-22 19:45:11,983 - INFO - Database engine disposed. Ingestion cycle finished.
+2026-01-22 19:45:12,182 - INFO - AUDIT: Validation stage completed successfully.
+2026-01-22 19:45:13,839 - INFO - AUDIT: Feature Store updated with 826 records.
+2026-01-22 19:45:14,163 - INFO - AUDIT: Model training finished. Metrics: {'explained_variance': 0.8330976645747852}
+2026-01-22 19:50:07,056 - INFO - AUDIT: Ingestion stage started.
+2026-01-22 19:50:07,570 - INFO - --- STARTING INGESTION PIPELINE ---
+2026-01-22 19:50:07,661 - INFO - Generated 1000 synthetic interaction records.
+2026-01-22 19:50:07,663 - INFO - Attempting API fetch from https://mockapi.recomart.com/products
+2026-01-22 19:50:07,673 - INFO - API SUCCESS: Retrived 5 products.
+2026-01-22 19:50:07,777 - INFO - AUDIT: Data Lake updated. Files created: data_lake\user_interactions_20260122T195007.csv, data_lake\products_20260122T195007.csv
+2026-01-22 19:50:08,417 - INFO - AUDIT SUCCESS: 1000 interactions and 5 products committed to SQL.
+2026-01-22 19:50:08,418 - INFO - Database engine disposed. Ingestion cycle finished.
+2026-01-22 19:50:08,643 - INFO - AUDIT: Validation stage completed successfully.
+2026-01-22 19:50:10,481 - INFO - AUDIT: Feature Store updated with 839 records.
+2026-01-22 19:50:10,836 - INFO - AUDIT: Model training finished. Metrics: {'explained_variance': 0.8568140713305777}
