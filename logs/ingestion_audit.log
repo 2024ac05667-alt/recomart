@@ -235,3 +235,51 @@
 2026-01-22 20:43:31,214 - INFO - AUDIT: Feature Store updated with 827 records.
 2026-01-22 20:43:31,681 - INFO - MODEL SUCCESS: RunID 774fe0fd-08d4-4d3d-9aa7-3115322dee8d | RMSE: 2.266345430486045
 2026-01-22 20:43:31,684 - INFO - AUDIT: Model training finished. Metrics: {'run_id': '774fe0fd-08d4-4d3d-9aa7-3115322dee8d', 'rmse': np.float64(2.2663), 'explained_variance': 0.8386, 'n_components': 4, 'timestamp': '2026-01-22T20:43:31.668544'}
+2026-01-22 20:48:38,287 - INFO - AUDIT: Ingestion stage started.
+2026-01-22 20:48:38,785 - INFO - --- STARTING INGESTION PIPELINE ---
+2026-01-22 20:48:38,934 - INFO - Generated 1000 synthetic interaction records.
+2026-01-22 20:48:38,935 - INFO - Attempting API fetch from https://mockapi.recomart.com/products
+2026-01-22 20:48:38,942 - INFO - API SUCCESS: Retrived 5 products.
+2026-01-22 20:48:39,062 - INFO - AUDIT: Data Lake updated. Files created: data_lake\user_interactions_20260122T204838.csv, data_lake\products_20260122T204838.csv
+2026-01-22 20:48:39,760 - INFO - AUDIT SUCCESS: 1000 interactions and 5 products committed to SQL.
+2026-01-22 20:48:39,762 - INFO - Database engine disposed. Ingestion cycle finished.
+2026-01-22 20:48:39,974 - INFO - AUDIT: Validation stage completed successfully.
+2026-01-22 20:48:41,970 - INFO - AUDIT: Feature Store updated with 836 records.
+2026-01-22 20:48:42,370 - INFO - MODEL SUCCESS: RunID c479513a-ea4c-4c63-a3bb-8b0a7d9f7730 | RMSE: 2.1754618219374864
+2026-01-22 20:48:42,374 - INFO - AUDIT: Model training finished. Metrics: {'run_id': 'c479513a-ea4c-4c63-a3bb-8b0a7d9f7730', 'rmse': np.float64(2.1755), 'explained_variance': 0.8525, 'n_components': 4, 'timestamp': '2026-01-22T20:48:42.337176'}
+2026-01-23 07:28:46,589 - INFO - AUDIT: Ingestion stage started.
+2026-01-23 07:28:47,517 - INFO - --- STARTING INGESTION PIPELINE ---
+2026-01-23 07:28:47,677 - INFO - Generated 1000 synthetic interaction records.
+2026-01-23 07:28:47,679 - INFO - Attempting API fetch from https://mockapi.recomart.com/products
+2026-01-23 07:28:47,691 - INFO - API SUCCESS: Retrived 5 products.
+2026-01-23 07:28:47,872 - INFO - AUDIT: Data Lake updated. Files created: data_lake\user_interactions_20260123T072847.csv, data_lake\products_20260123T072847.csv
+2026-01-23 07:28:48,424 - INFO - AUDIT SUCCESS: 1000 interactions and 5 products committed to SQL.
+2026-01-23 07:28:48,442 - INFO - Database engine disposed. Ingestion cycle finished.
+2026-01-23 07:28:48,829 - INFO - AUDIT: Validation stage completed successfully.
+2026-01-23 07:28:53,649 - INFO - AUDIT: Feature Store updated with 825 records.
+2026-01-23 07:28:54,104 - INFO - MODEL SUCCESS: RunID 3e41d0d5-c49f-4974-9dca-57a37fbed153 | RMSE: 2.233096216486767
+2026-01-23 07:28:54,108 - INFO - AUDIT: Model training finished. Metrics: {'run_id': '3e41d0d5-c49f-4974-9dca-57a37fbed153', 'rmse': np.float64(2.2331), 'explained_variance': 0.8506, 'n_components': 4, 'timestamp': '2026-01-23T07:28:54.072634'}
+2026-01-23 07:29:10,782 - INFO - AUDIT: Ingestion stage started.
+2026-01-23 07:29:10,933 - INFO - --- STARTING INGESTION PIPELINE ---
+2026-01-23 07:29:10,949 - INFO - Generated 1000 synthetic interaction records.
+2026-01-23 07:29:10,951 - INFO - Attempting API fetch from https://mockapi.recomart.com/products
+2026-01-23 07:29:10,954 - INFO - API SUCCESS: Retrived 5 products.
+2026-01-23 07:29:10,984 - INFO - AUDIT: Data Lake updated. Files created: data_lake\user_interactions_20260123T072910.csv, data_lake\products_20260123T072910.csv
+2026-01-23 07:29:11,398 - INFO - AUDIT SUCCESS: 1000 interactions and 5 products committed to SQL.
+2026-01-23 07:29:11,400 - INFO - Database engine disposed. Ingestion cycle finished.
+2026-01-23 07:29:11,608 - INFO - AUDIT: Validation stage completed successfully.
+2026-01-23 07:29:13,236 - INFO - AUDIT: Feature Store updated with 825 records.
+2026-01-23 07:29:13,418 - INFO - MODEL SUCCESS: RunID b003d134-c800-46e9-a17a-537fd2cd2b27 | RMSE: 1.9946015506008596
+2026-01-23 07:29:13,422 - INFO - AUDIT: Model training finished. Metrics: {'run_id': 'b003d134-c800-46e9-a17a-537fd2cd2b27', 'rmse': np.float64(1.9946), 'explained_variance': 0.8736, 'n_components': 4, 'timestamp': '2026-01-23T07:29:13.403789'}
+2026-01-23 07:29:24,980 - INFO - AUDIT: Ingestion stage started.
+2026-01-23 07:29:25,117 - INFO - --- STARTING INGESTION PIPELINE ---
+2026-01-23 07:29:25,126 - INFO - Generated 1000 synthetic interaction records.
+2026-01-23 07:29:25,128 - INFO - Attempting API fetch from https://mockapi.recomart.com/products
+2026-01-23 07:29:25,131 - INFO - API SUCCESS: Retrived 5 products.
+2026-01-23 07:29:25,188 - INFO - AUDIT: Data Lake updated. Files created: data_lake\user_interactions_20260123T072925.csv, data_lake\products_20260123T072925.csv
+2026-01-23 07:29:25,557 - INFO - AUDIT SUCCESS: 1000 interactions and 5 products committed to SQL.
+2026-01-23 07:29:25,559 - INFO - Database engine disposed. Ingestion cycle finished.
+2026-01-23 07:29:25,732 - INFO - AUDIT: Validation stage completed successfully.
+2026-01-23 07:29:27,316 - INFO - AUDIT: Feature Store updated with 819 records.
+2026-01-23 07:29:27,501 - INFO - MODEL SUCCESS: RunID 221abfaf-5842-4e64-875b-efe14b430c1c | RMSE: 2.1490244468285993
+2026-01-23 07:29:27,505 - INFO - AUDIT: Model training finished. Metrics: {'run_id': '221abfaf-5842-4e64-875b-efe14b430c1c', 'rmse': np.float64(2.149), 'explained_variance': 0.8599, 'n_components': 4, 'timestamp': '2026-01-23T07:29:27.482879'}

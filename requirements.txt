@@ -1,9 +1,22 @@
+# Data Manipulation & Math
 pandas
+numpy
+
+# Database & API
+sqlalchemy
+psycopg2-binary
 requests
+
+# Visualization & Reporting
 matplotlib
 seaborn
-prefect
+reportlab
+
+# Machine Learning
 scikit-learn
-scikit-surprise
-fpdf
-uvicorn
+
+# Orchestration (Task 10)
+prefect
+
+# Data Versioning (Task 8)
+dvc
